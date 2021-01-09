@@ -3,7 +3,7 @@ This repository contains our project for the Data Camp course which is given wit
 The course is administred by Mr. Alexandre Gramfort and Mr. Thomas Moral.
 The authors of the project are:
  * Yuhe Bai
- * Jérôme Bonin
+ * Jérôme Bonnin
  * Louis Mercier
  * Dan Allouche
  * Lotfi Kobrosly
