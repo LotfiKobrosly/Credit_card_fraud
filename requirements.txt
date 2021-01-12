@@ -4,4 +4,4 @@ sklearn
 pandas
 jupyter
 ramp-workflow
-
+pyreadr
