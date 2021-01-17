@@ -5,8 +5,8 @@ import numpy as np
 '''Divide the data in creditcard.csv into two csv files train.csv and test.csv Among them, there are 227846 data in train.csv and 56961 data in test.csv'''
 labels = []
 data = []
-a_train_file = 'train.csv'
-a_test_file = 'test.csv'
+a_train_file = 'data/train.csv'
+a_test_file = 'data/test.csv'
 a_file = 'creditcard.csv'
 
 seed = 3
