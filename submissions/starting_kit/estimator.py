@@ -14,6 +14,13 @@ class Uniform(BaseEstimator): # dummy estimator to test ramp
         return self
     
     def predict(self, X):
+        #############################################################
+        # Return a (n_samples,2) array with probs for each class    #
+        # (with sklearn classifier it corresponds to predict_proba) #
+        # In practice, if you have y_pred a (n_samples,) array of   #
+        # 0s and 1s or of probabilities of being 1, just return     #
+        # something like ***np.array([1 - y_pred, y_pred]).T***     #
+        #############################################################
         y_pred = np.ones((X.shape[0],)) * self.value
         return np.array([1 - y_pred, y_pred]).T
 
