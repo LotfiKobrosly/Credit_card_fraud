@@ -1,4 +1,4 @@
-name: ramp-brevet
+name: ramp-card-fraud
 channels:
   - defaults
   - conda-forge

@@ -1,7 +1,7 @@
 numpy
-matplotlib
-sklearn
 pandas
+sklearn
+matplotlib
+seaborn
 jupyter
 ramp-workflow
-pyreadr
