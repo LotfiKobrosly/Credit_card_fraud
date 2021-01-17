@@ -5,10 +5,10 @@ import rampwf as rw
 from sklearn.model_selection import ShuffleSplit
 
 
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, precision_score
 from rampwf.score_types.classifier_base import ClassifierBaseScoreType
 
-class F1(ClassifierBaseScoreType):
+class F1_score(ClassifierBaseScoreType):
     is_lower_the_better = False
     minimum = 0.0
     maximum = 1.0
@@ -20,6 +20,19 @@ class F1(ClassifierBaseScoreType):
     def __call__(self, y_true, y_pred):
         f1 = f1_score(y_true, y_pred)
         return f1
+
+class Precision_score(ClassifierBaseScoreType):
+    is_lower_the_better = False
+    minimum = 0.0
+    maximum = 1.0
+
+    def __init__(self, name='pre', precision=2):
+        self.name = name
+        self.precision = precision
+
+    def __call__(self, y_true, y_pred):
+        pre = precision_score(y_true, y_pred)
+        return pre
 
 
 problem_title = 'Credit Card Fraud Detection'
@@ -35,8 +48,8 @@ Predictions = rw.prediction_types.make_multiclass(
 workflow = rw.workflows.Estimator()
 
 score_types = [
-    rw.score_types.ROCAUC(name='auc', precision=5),
-    F1(name='f1', precision=5)
+    F1_score(name='f1', precision=5),
+    Precision_score(name='pre', precision=5)
 ]
 
 
